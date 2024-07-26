@@ -12,6 +12,7 @@ from PySide6.QtGui import QFont
 def get_sorted_pdf_files(directory):
     pdf_files = [f for f in os.listdir(directory) if f.lower().endswith('.pdf')]
     pdf_files.sort()
+    pdf_files.sort(key=len)
     return pdf_files
 
 
